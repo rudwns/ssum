@@ -11,13 +11,14 @@
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
       <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-      <link rel="stylesheet" href="assets/css/main.css" />
+      <link rel="stylesheet" href="assets/css/main1.css" />
       <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
       <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
       <style type="text/css">
-      body {
+      
+       body {
          font-family: a펜글씨L
-      }
+      } 
       #main #intro {
       background-color: rgba(243,181,184,0.85)
       }
@@ -30,6 +31,7 @@
       #main #contact {
       background-color: rgba(213,114,111,0.85)
       }
+     
       
       #videobcg{
          top: 0px;
@@ -42,7 +44,10 @@
          overflow:hidden;
       
       }
-      
+		a.login{
+			font-size : 5;
+			color: black;
+		}
    
       </style>
       
@@ -57,9 +62,14 @@
    height : 100
 });
 </script>
-
+		
       <!-- Wrapper -->
       <div id="wrapper" >
+      
+      <!-- <div id="menu" style="position:absolute; right:20px;top:-70px z-index: 1;">
+      			<a href="login.html" style="font: black" class="login" >로그인</a>
+      		</div> -->
+      		
             <video id="videobcg" preload="auto" autoplay="ture" loop="loop" volume="5" style="position:fixed;
              ">
                <source src="movie3.mp4" type="video/mp4">
@@ -88,6 +98,7 @@
                <li><a href="#work">Work</a></li>
                <li><a href="#about">About</a></li>
                <li><a href="#contact">Contact</a></li>
+               <li><a href="#login">Login</a></li>
                <!--<li><a href="#elements">Elements</a></li>-->
             </ul>
          </nav>
@@ -148,7 +159,34 @@
                            <li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
                         </ul>
                      </article>
-
+                     <!-- Login -->
+                     <article id="login">
+                     
+                     	 <h2 class="major">LOGIN</h2>
+                        <form method="post" action="#">
+                           <div class="field half first">
+                              <label for="name">ID</label>
+                              <input type="text" id="id" />
+                           </div>
+                           <div class="field half">
+                              <label for="email">PASSWORD</label>
+                              <input type="text" id="pw" />
+                           </div>
+                            <ul class="actions">
+                              <li><input type="submit" value="Login" class="special" /></li>
+                           </ul>
+                           <h2 class="major" align="center">JOINUS</h2>
+                           <div class="field">
+                              <label for="message">Message</label>
+                              <textarea name="message" id="message" rows="4"></textarea>
+                           </div>
+                           <ul class="actions">
+                              <li><input type="submit" value="Send Message" class="special" /></li>
+                           </ul>
+                        </form>
+                       
+                     </article>
+					
                   <!-- Elements -->
                      <article id="elements">
                         <h2 class="major">Elements</h2>
