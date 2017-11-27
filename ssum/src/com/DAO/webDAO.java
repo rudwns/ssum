@@ -37,20 +37,21 @@ public class webDAO {
 		// DBMS id와 pw를 인증을 받고 DB를 핸들링 할수 있는 Connection 객체를 생성
 	}
 
-	public int Join(String email, String pw, String tel,String address) throws Exception{
+	public int Join(String id, String pw, String name,String personnumber, String sex) throws Exception{
 		getconn();
-		pst = conn.prepareStatement("insert into web_member values(?,?,?,?)");
-		pst.setString(1, email);
+		pst = conn.prepareStatement("insert into ssum values(?,?,?,?,?)");
+		pst.setString(1, id);
 		pst.setString(2, pw);
-		pst.setString(3, tel);
-		pst.setString(4, address);
+		pst.setString(3, name);
+		pst.setString(4, personnumber);
+		pst.setString(5, sex);
 		int cnt = pst.executeUpdate();
 		return cnt;
 	}
 	
 	public int login(String id, String pw) throws Exception{
 		getconn();
-		pst = conn.prepareStatement("select * from web_member where email = ?");
+		pst = conn.prepareStatement("select * from ssum where id = ?");
 		pst.setString(1,id);
 		rs = pst.executeQuery();
 		int a = 0;
@@ -67,27 +68,8 @@ public class webDAO {
 
 	
 	
-	public int update(String email, String pw, String tel, String address) throws Exception{
-		getconn();
-		pst = conn.prepareStatement("update web_member set pw=?,tel=?,address=? where email =? ");
-		pst.setString(1,pw);
-		pst.setString(2,tel);
-		pst.setString(3,address);
-		pst.setString(4,email);
-		int cnt = pst.executeUpdate();
-		return cnt;
-	}
-
-	public int messageinsert(String name,String email,String message) throws Exception{
-		
-		getconn();
-		pst = conn.prepareStatement("insert into web_message values(message_num.nextval,?,?,?,sysdate)");
-		pst.setString(1,name);
-		pst.setString(2,email);
-		pst.setString(3,message);
-		int cnt = pst.executeUpdate();
-		return cnt;
-	}
+	
+	
 	
 	
 }

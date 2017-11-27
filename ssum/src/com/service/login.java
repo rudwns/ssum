@@ -29,8 +29,7 @@ public class login extends HttpServlet {
 				HttpSession session = request.getSession();
 
 				session.setAttribute("id", id);
-				//로그인 상태유지를 하기 위해
-				//session 영역에 email 값 저장
+				
 				response.sendRedirect("index.html");
 			}else{
 				response.setContentType("text/html;charset = euc-kr");
