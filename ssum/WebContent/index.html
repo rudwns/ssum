@@ -11,14 +11,14 @@
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
       <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-      <link rel="stylesheet" href="assets/css/main.css" />
+      <link rel="stylesheet" href="assets/css/main1.css" />
       <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
       <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
       <style type="text/css">
-      body {
-      
+
+       body {
          font-family: a펜글씨L
-      }
+      } 
       #main #intro {
       background-color: rgba(243,181,184,0.85)
       }
@@ -33,6 +33,7 @@
       #main #contact {
       background-color: rgba(213,114,111,0.85)
       }
+     
       
       #videobcg{
          top: 0px;
@@ -45,25 +46,31 @@
          overflow:hidden;
       
       }
-      
+		a.login{
+			font-size : 5;
+			color: black;
+		}
    
       </style>
       
    </head>
    <body>
+<!-- SCM Music Player http://scmplayer.co -->
+<script type="text/javascript" src="http://scmplayer.co/script.js" 
+data-config="{'skin':'http://static.tumblr.com/su8juwr/c2dmsx8kt/coracaogif.css','volume':21,'autoplay':true,'shuffle':false,'repeat':1,'placement':'top','showplaylist':false,'playlist':[{'title':'%uD30D%uC2A4%uCC28%uC77C%uB4DC - %uC5F0%uC560%uCD08%uBC18','url':'https://www.youtube.com/watch?v=VOPx5SdidZk&list=PLseSYv0v1TarlwujkT_I9Wd7aDcKxxQd4&index=2'},{'title':'%uCE58%uC988 - Be There','url':'https://www.youtube.com/watch?v=EbKHsEUAgHA&list=PLseSYv0v1TarlwujkT_I9Wd7aDcKxxQd4&index=5'},{'title':'%uD5E8%uB9AC&%uC18C%uC720 - %uC6B0%uB9AC%uB458','url':'https://www.youtube.com/watch?v=niMCsodCAU0&index=4&list=PLseSYv0v1TarlwujkT_I9Wd7aDcKxxQd4'},{'title':'%uD3F4%uD0B4 - Wanna love you','url':'https://www.youtube.com/watch?v=oxGcr-KrlUA&index=9&list=PLseSYv0v1TarlwujkT_I9Wd7aDcKxxQd4'},{'title':'%uB85C%uC774%uD0B4 - %uC5B4%uCA4C%uBA74,%uB098','url':'https://www.youtube.com/watch?v=W4BQenS0tno&index=12&list=PLseSYv0v1TarlwujkT_I9Wd7aDcKxxQd4'},{'title':'%uCC38%uAE68%uC640 %uC19C%uC0AC%uD0D5 - %uB450%uB9AC%uB450%uB9AC','url':'https://www.youtube.com/watch?v=NA1qlyrJ-C0&index=19&list=PLseSYv0v1TarlwujkT_I9Wd7aDcKxxQd4'}]}" ></script>
+<!-- SCM Music Player script end -->
 
-<script>
-   var myPlayer = new wimpyPlayer({
-   media : "song1.mp3|song2.mp3",
-   skin : "runboy.tsv",
-   width : 300,
-   height : 100
-});
-</script>
 
+
+		
       <!-- Wrapper -->
       <div id="wrapper" >
-            <video id="videobcg" preload="auto" autoplay="ture" loop="loop" volume="5" style="position:fixed;
+      
+      <!-- <div id="menu" style="position:absolute; right:20px;top:-70px z-index: 1;">
+      			<a href="login.html" style="font: black" class="login" >로그인</a>
+      		</div> -->
+      		
+            <video id="videobcg" preload="auto" autoplay="ture" loop="loop" volume="Mute"  style="position:fixed; 
              ">
                <source src="movie3.mp4" type="video/mp4">
                <source src="movie.webm" type="moive/webm">
@@ -91,6 +98,7 @@
                <li><a href="#work">Work</a></li>
                <li><a href="#about">About</a></li>
                <li><a href="#contact">Contact</a></li>
+               <li><a href="#login">Login</a></li>
                <!--<li><a href="#elements">Elements</a></li>-->
             </ul>
          </nav>
@@ -151,7 +159,34 @@
                            <li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
                         </ul>
                      </article>
-
+                     <!-- Login -->
+                     <article id="login">
+                     
+                     	 <h2 class="major">LOGIN</h2>
+                        <form method="post" action="#">
+                           <div class="field half first">
+                              <label for="name">ID</label>
+                              <input type="text" id="id" />
+                           </div>
+                           <div class="field half">
+                              <label for="email">PASSWORD</label>
+                              <input type="text" id="pw" />
+                           </div>
+                            <ul class="actions">
+                              <li><input type="submit" value="Login" class="special" /></li>
+                           </ul>
+                           <h2 class="major" align="center">JOINUS</h2>
+                           <div class="field">
+                              <label for="message">Message</label>
+                              <textarea name="message" id="message" rows="4"></textarea>
+                           </div>
+                           <ul class="actions">
+                              <li><input type="submit" value="Send Message" class="special" /></li>
+                           </ul>
+                        </form>
+                       
+                     </article>
+					
                   <!-- Elements -->
                      <article id="elements">
                         <h2 class="major">Elements</h2>
